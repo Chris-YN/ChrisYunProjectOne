@@ -379,7 +379,7 @@ a:visited {
 //// Header Styling ////
 =====================*/
 .homeHeader {
-  background: url(../assets/home-1.jpeg);
+  background-image: url(../assets/home-1.jpeg);
   background-size: cover;
 }
 
@@ -583,6 +583,74 @@ a:visited {
   background-size: cover;
 }
 
+/*=================================================
+//// homePage 450px media queries ////
+===============================================*/
+@media (max-width: 450px) {
+  .aboutUs .aboutUsBackgroundHolder {
+    width: 100%;
+  }
+  .aboutUs .aboutUsBackgroundHolder .aboutUsCircleTextHolder {
+    width: 40%;
+    left: -3%;
+    bottom: 40%;
+  }
+  .aboutUs .aboutUsTextFlexParent {
+    flex-direction: column;
+  }
+  .aboutUs .aboutUsTextFlexParent div {
+    width: 100%;
+    padding: 5% 2.5% 7% 2.5%;
+  }
+
+  .portfolio p {
+    width: 100%;
+  }
+
+  .specialty {
+    height: 320%;
+    background-position: bottom right;
+  }
+
+  .specialtyListContainer {
+    margin: 5%;
+    padding-top: 10%;
+  }
+  .specialtyListContainer .specialtyListFlexParent {
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 5%;
+  }
+  .specialtyListContainer .specialtyListFlexParent li {
+    margin-bottom: 5%;
+  }
+
+  .meetOurTeam .meetOurTeamFlexParent .meetOurTeamText {
+    width: 100%;
+    margin-right: 0;
+    padding-top: 5%;
+  }
+  .meetOurTeam .meetOurTeamFlexParent .meetOurTeamImgSquare {
+    width: calc((100% - 60px) / 2);
+    margin: 15px;
+    margin-bottom: 16px;
+  }
+  .meetOurTeam .meetOurTeamFlexParent div:nth-child(3), .meetOurTeam .meetOurTeamFlexParent div:nth-child(7) {
+    margin-right: 15px;
+  }
+
+  .dropUsALine .DropUsALineFlexParent {
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+  }
+  .dropUsALine .DropUsALineFlexParent .dropUsALineText {
+    width: 100%;
+  }
+  .dropUsALine .DropUsALineFlexParent .dropUsALineImgBackgroundContainer {
+    width: 100%;
+  }
+}
 /*=======================
 //// Header Styling ////
 =====================*/
@@ -755,6 +823,45 @@ h5::after,
   height: 250px;
 }
 
+/*=====================================
+//// blogPage 450px media queries ////
+===================================*/
+h4 {
+  font-size: 2em;
+}
+
+.mainBlogPost .wrapper .mainBlogPostAutorFlexParent {
+  flex-wrap: wrap;
+}
+.mainBlogPost .wrapper .mainBlogPostAutorFlexParent li {
+  width: 50%;
+}
+.mainBlogPost .wrapper .mainBlogPostAutorFlexParent div {
+  margin-top: 15px;
+}
+
+.comments .formFlexParent {
+  flex-direction: column;
+}
+.comments .formFlexParent .inputContainer {
+  margin: 5% 0 5% 0;
+}
+.comments .formFlexParent .inputContainer input {
+  width: 250px;
+}
+.comments .formFlexParent input,
+.comments .formFlexParent textarea {
+  border: 1px solid #747474;
+}
+
+.mainBlogPostAutorFlexParent::after,
+h5::after,
+.horizontalGreyShort::after,
+.horizontalGreyShortDark::after,
+.horizontalGreyLong::after {
+  visibility: hidden;
+}
+
 /*================================
 //// general contact Styling ////
 ==============================*/
@@ -775,6 +882,10 @@ h2 {
 }
 .contactHeader h4 {
   margin-top: 13%;
+}
+
+.hiddenH4 {
+  visibility: hidden;
 }
 
 /*=================================
@@ -873,6 +984,37 @@ h2 {
   background-position: center;
 }
 
+/*========================================
+//// contactPage 450px media queries ////
+======================================*/
+.visibleH4 {
+  visibility: hidden;
+}
+
+.hiddenH4 {
+  visibility: visible;
+  text-align: center;
+}
+
+.getInTouch .formFlexParent {
+  flex-direction: column;
+}
+.getInTouch .formFlexParent .inputContainer {
+  margin: 5% 0 5% 0;
+}
+.getInTouch .formFlexParent .inputContainer input {
+  width: 250px;
+}
+.getInTouch .formFlexParent input,
+.getInTouch .formFlexParent textarea {
+  border: 1px solid #747474;
+}
+.getInTouch button {
+  margin-top: 5%;
+  background-color: #F6F6F6;
+  border: 1px solid #747474;
+}
+
 /*=======================
 //// Header Styling ////
 =====================*/
@@ -885,13 +1027,13 @@ header .topNavFlexParent {
   width: 100%;
   padding-top: 5%;
 }
-header .navText {
-  display: inline-block;
-}
 header h1 {
   width: 30%;
   text-align: center;
   margin: 0 auto;
+}
+header .burgerMenuForSmallScreen {
+  visibility: hidden;
 }
 header ul {
   display: flex;
@@ -971,4 +1113,45 @@ footer {
 footer p {
   color: #FFFFFF;
   padding: 5% 0;
+}
+
+/*=================================================
+//// header & .bottomBand 450px media queries ////
+===============================================*/
+@media (max-width: 450px) {
+  .wrapper {
+    width: 90%;
+  }
+
+  header h1 {
+    width: 100%;
+    margin: 0 auto;
+  }
+  header .topNavLeft,
+header .topNavRight {
+    display: none;
+  }
+  header .burgerMenuForSmallScreen {
+    font-size: 1.6em;
+    visibility: visible;
+    margin-top: 7px;
+  }
+
+  .bottomBand .bottomBandFlexParent {
+    flex-direction: column;
+    text-align: center;
+  }
+  .bottomBand .snsLinkIconsFlexParent {
+    justify-content: center;
+    margin-top: 0;
+    margin-bottom: 15%;
+  }
+  .bottomBand h3 {
+    text-align: center;
+    margin-top: 15%;
+    margin-bottom: 0;
+  }
+  .bottomBand .signUp p {
+    text-align: center;
+  }
 }/*# sourceMappingURL=style.css.map */
