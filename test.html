@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./styles/sass/style.css"> -->
+    <style>
+        .wrapper{
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        .meetOurTeamFlexParent{
+             display: flex;
+             flex-wrap: wrap;
+             width: calc((100% / 4 - (10px * 3))*2 + 10px);
+        }
+
+        .meetOurTeamFlexParent div{
+            margin-right: 10px;
+            width: calc(100% / 4 - (10px * 3));
+        }
+
+        .meetOurTeamFlexParent div:nth-child(3),
+        .meetOurTeamFlexParent div:nth-child(6){
+            margin-right: 0;
+        }
+
+        .meetOurTeamText{
+            width: 450px;
+            background-color:grey;
+        }
+
+        img{
+            width:calc(1000px / 4 - 30px) ;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<section class="meetOurTeam">
+    <div class="wrapper">
+        <h2>MEET OUR TEAM</h2>
+        <div class="meetOurTeamFlexParent">
+            <div class="meetOurTeamText">
+                <h3>TEAM PLAYERS</h3>
+                <P>Pitch client interaction design ownership disruptive leverage prototype conversion. Deployment
+                    calidation gen-z disruptive paradigm shift churn rate niche marketing graphical user interface.</P>
+            </div>
+            <div>
+                <img src="./styles/assets/home-5.jpeg" alt="Picture of a team member Danny">
+            </div>
+
+            <div>
+                <img src="./styles/assets/home-6.jpeg" alt="Picture of a team member Alex">
+            </div>
+
+            <div>
+                <img src="./styles/assets/home-7.jpeg" alt="Picture of a team member Rose">
+            </div>
+
+            <div>
+                <img src="./styles/assets/home-8.jpeg" alt="Picture of a team member Mark">
+            </div>
+
+            <div>
+                <img src="./styles/assets/home-9.jpeg" alt="Picture of a team member Cindy">
+            </div>
+
+            <div>
+                WANT TO WORK WITH US !
+            </div>
+
+        </div>
+        <!-- // .meetOurTeamFlexParent ends // -->
+    </div>
+    <!-- // .wrapper meetourTeam ends // -->
+</section>
+<!-- // section .meetOurTeam ends // -->

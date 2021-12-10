@@ -232,6 +232,8 @@ html {
 
 h1,
 h2,
+h3,
+h4,
 p,
 ul,
 a {
@@ -253,10 +255,16 @@ li {
   max-width: 1280px;
 }
 
+.button {
+  background-color: #FFFFFF;
+}
+.button p {
+  padding: 15px 25px;
+}
+
 html {
   font-size: 125%;
   line-height: 1.15;
-  color: #333333;
 }
 
 h1 {
@@ -300,18 +308,47 @@ p {
   font-size: 0.7em;
   line-height: 1.71em;
   letter-spacing: 0.021em;
+  color: #333333;
 }
 
 .navText {
   font-family: "Montserrat", sans-serif;
   font-size: 0.7em;
-  letter-spacing: 0.035em;
+  letter-spacing: 0.021em;
 }
-.navText a {
-  color: #333333;
+
+a {
+  color: black;
 }
-.navText a:visited {
-  color: #333333;
+a:visited {
+  color: black;
+}
+
+.button p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: black;
+}
+
+.bottomBand {
+  color: #FFFFFF;
+}
+.bottomBand p {
+  color: #FFFFFF;
+}
+.bottomBand a {
+  color: #FFFFFF;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.7em;
+  letter-spacing: 0.021em;
+}
+.bottomBand form {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.7em;
+  letter-spacing: 0.021em;
+  color: #F6F6F6;
 }
 
 /*========================
@@ -393,7 +430,7 @@ header ul li:last-child {
   font-size: 2em;
 }
 .portfolio .portfolioPreview {
-  padding: 13% 0 13% 0;
+  padding: 10% 0 10% 0;
 }
 .portfolio .portfolioPreviewFlexParent {
   padding-bottom: 3%;
@@ -470,24 +507,147 @@ header ul li:last-child {
 //// section - .MeetOurTeam Styling ////
 =====================================*/
 .meetOurTeam {
-  padding-top: 7%;
+  padding-top: 5%;
 }
 .meetOurTeam .meetOurTeamFlexParent {
+  padding-top: 5%;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
 }
-.meetOurTeam .meetOurTeamFlexParent div {
-  margin-right: 2%;
-  width: calc(100% / 4 - 6%);
-}
-.meetOurTeam .meetOurTeamFlexParent .meetOurTeamText {
-  width: calc((100% / 4 - 6%) * 2 + 2%);
-  background-color: #F6F6F6;
+.meetOurTeam .meetOurTeamFlexParent .meetOurTeamImgSquare {
+  width: calc((100% - 48px) / 4);
+  margin-right: 16px;
+  margin-bottom: 16px;
 }
 .meetOurTeam .meetOurTeamFlexParent img {
-  max-width: 100%;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-.meetOurTeam div:nth-child(3), .meetOurTeam div:nth-child(6) {
+.meetOurTeam .meetOurTeamFlexParent .meetOurTeamText {
+  width: calc(50% - 8px);
+  background-color: #F6F6F6;
+  margin-right: 16px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding-bottom: 3%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.meetOurTeam .meetOurTeamFlexParent .meetOurTeamText h3 {
+  margin-bottom: 20px;
+}
+.meetOurTeam .meetOurTeamFlexParent div:nth-child(3), .meetOurTeam .meetOurTeamFlexParent div:nth-child(7) {
   margin-right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.meetOurTeam .meetOurTeamFlexParent div:nth-child(3) h3, .meetOurTeam .meetOurTeamFlexParent div:nth-child(7) h3 {
+  text-align: center;
+  width: 60%;
+}
+
+/*=======================================
+//// section - .dropUsALine Styling ////
+=====================================*/
+.dropUsALine {
+  margin-top: 10%;
+}
+.dropUsALine .DropUsALineFlexParent {
+  height: 95vh;
+  display: flex;
+  width: 100%;
+}
+.dropUsALine .DropUsALineFlexParent .dropUsALineText {
+  width: 50%;
+  background-color: #C3DAB7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10%;
+}
+.dropUsALine .DropUsALineFlexParent .dropUsALineText p:nth-child(2) {
+  margin: 10% 0;
+}
+.dropUsALine .DropUsALineFlexParent .dropUsALineImgBackgroundContainer {
+  width: 50%;
+  background-image: url(../assets/home-10.jpeg);
+  background-size: cover;
+}
+
+/*======================================
+//// section - .bottomBand Styling ////
+====================================*/
+.bottomBand {
+  background-color: #333333;
+  color: #FFFFFF;
+  padding: 10% 0 8% 0;
+}
+.bottomBand .bottomBandFlexParent {
+  display: flex;
+  justify-content: space-between;
+}
+.bottomBand .bottomBandFlexParent h3 {
+  margin-bottom: 15%;
+}
+.bottomBand .bottomBandFlexParent .recentPosts h3 {
+  text-align: center;
+}
+.bottomBand .bottomBandFlexParent .recentPosts li {
+  list-style: disc;
+}
+.bottomBand .bottomBandFlexParent .snsLinkIconsFlexParent {
+  display: flex;
+}
+.bottomBand .bottomBandFlexParent li {
+  margin-bottom: 10px;
+}
+.bottomBand .bottomBandFlexParent .snsLinkIconsFlexParent {
+  margin-top: 10%;
+}
+.bottomBand .bottomBandFlexParent .snsLinkIconsFlexParent li:nth-child(2) {
+  margin: 0 10%;
+}
+.bottomBand .bottomBandFlexParent .signUp {
+  text-align: right;
+}
+.bottomBand .bottomBandFlexParent .signUp form {
+  margin-top: 10%;
+  display: flex;
+}
+.bottomBand .bottomBandFlexParent input[type=email] {
+  width: 80%;
+  height: 40px;
+  margin: 0;
+  padding: 0 0 0 25px;
+  border: none;
+}
+.bottomBand .bottomBandFlexParent button {
+  width: 20%;
+  height: 40px;
+  padding: 0;
+  border: none;
+  color: white;
+  background-color: #C3DAB7;
+  border: solid 1px #C3DAB7;
+}
+
+/*==================================
+//// section - .footer Styling ////
+================================*/
+footer {
+  margin-top: 1px;
+  text-align: center;
+  background-color: #333333;
+}
+footer p {
+  color: #FFFFFF;
+  padding: 5% 0;
 }/*# sourceMappingURL=style.css.map */
