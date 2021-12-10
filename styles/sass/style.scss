@@ -1,0 +1,190 @@
+
+
+@import "./partials/colors";
+@import "./partials/normalize";
+@import "./partials/generalStyling";
+@import "./partials/fontStyling";
+@import "./partials/homePageStyling";
+@import "./partials/blogPageStyling";
+@import "./partials/contactPageStyling";
+
+
+
+/*=======================
+//// Header Styling ////
+=====================*/
+header{
+    background-position: center;
+    height: 100vh;
+
+    .topNavFlexParent{
+        display: flex;
+        width: 100%;
+        padding-top: 5%;
+    }
+    
+    // .navText{
+    //     display: inline-block;
+    // }
+
+    h1{
+        width: 30%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .burgerMenuForSmallScreen {
+        visibility: hidden;
+    }
+
+    ul{
+        display: flex;
+        li {
+            margin-right: 5%;
+        }
+        & li:last-child{
+            margin-right: 0;
+        }
+    }
+}
+
+
+
+/*======================================
+//// section - .bottomBand Styling ////
+====================================*/
+.bottomBand{
+    background-color: $black;
+    color: $white;
+    padding: 10% 0 8% 0;
+    
+    .bottomBandFlexParent{
+        display: flex;
+        justify-content: space-between;
+
+        h3{
+            margin-bottom: 15%;
+        }
+
+        .recentPosts h3{
+            text-align: center;
+        }
+
+        .recentPosts li{
+            list-style: disc;
+        }
+
+        .snsLinkIconsFlexParent{
+            display: flex;
+        }
+
+        li{
+            margin-bottom: 10px;
+        }
+
+        .snsLinkIconsFlexParent{
+            margin-top: 10%;
+            
+            & li:nth-child(2){
+                margin: 0 10%;
+            }
+        }
+
+        .signUp{
+            text-align: right;
+        }
+
+        .signUp form{
+            margin-top: 10%;
+            display: flex;
+            }
+
+        input[type=email] {
+        width: 80%;
+        height: 40px;
+        margin: 0;
+        padding: 0 0 0 25px;
+        border:none;
+        }
+
+        button {
+        width: 20%;
+        height: 40px;
+        padding: 0;
+        border:none;
+        color: white;
+        background-color: $lightSage;
+        border: solid 1px $lightSage;
+        }
+    }
+}
+
+
+
+
+
+/*==================================
+//// section - .footer Styling ////
+================================*/
+footer{
+    margin-top:1px;
+    text-align: center;
+    background-color:$black;
+
+    p{
+        color: $white;
+        padding: 5% 0;
+    }    
+}
+
+
+
+/*=================================================
+//// header & .bottomBand 450px media queries ////
+===============================================*/
+@media (max-width: 450px){
+    .wrapper{
+    width: 90%;
+    }
+
+    header{
+        h1{
+            width: 100%;
+            margin:0 auto;
+        }
+        .topNavLeft,
+        .topNavRight{
+            display: none;
+        }
+
+        .burgerMenuForSmallScreen {
+            font-size: 1.6em;
+            visibility: visible;
+            margin-top:7px;
+
+        }
+
+    }
+
+    .bottomBand{
+        .bottomBandFlexParent{
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .snsLinkIconsFlexParent{
+            justify-content: center;
+            margin-top: 0;
+            margin-bottom: 15%;
+        }
+
+        h3{
+            text-align: center;
+            margin-top:15%;
+            margin-bottom: 0;
+        }
+        .signUp p{
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,254 @@
+
+
+/*=======================
+//// Header Styling ////
+=====================*/
+.blogHeader{
+    background-image: url(../assets/blog-1.jpeg);
+    background-size: cover;
+}
+
+
+
+/*================================
+//// horizontal line Styling ////
+==============================*/
+.mainBlogPostAutorFlexParent,
+h5,
+.inputContainer,
+.textareaContainer,
+.submitContainer{
+    position: relative;
+}
+
+.mainBlogPostAutorFlexParent::after,
+h5::after,
+.horizontalGreyShort::after,
+.horizontalGreyShortDark::after,
+.horizontalGreyLong::after{
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: $whiteTwo;
+        bottom: -40%;
+        left: 0;
+}
+
+.horizontalGreyShort::after,
+.horizontalGreyShortDark::after{
+    width: 85%;
+}
+
+.horizontalGreyShortDark::after{
+    background-color: $accessibilityGrey;
+}
+
+.horizontalGreyLong::after{
+    bottom: 0;
+}
+
+.submitContainer .horizontalGreyShort::after{
+    width: 100%;
+    bottom: 0;
+    background-color: $accessibilityGrey;
+}
+
+/*======================================
+//// section .mainBlogPost Styling ////
+====================================*/
+.mainBlogPost{
+    padding-top: 10%;
+    
+    h4{
+        margin-bottom: 2%;
+    }
+
+    span,
+    .ligterBodyText,
+    .mainBlogPostAutorFlexParent p{
+        /*suitable grey wasn't provided in color palette.
+        lightest grey that passes contrast check test has been 
+        picked to be used for grey fonts on white background 
+        resource used for check  colourcontrast.cc */
+        color: $accessibilityGrey;
+    }
+
+    .mainBlogPostAutorFlexParent{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .mainBlogPostAutorFlexParent{
+        margin: 7% 0;
+    }
+
+    img{
+        border-radius: 50%;
+    }
+
+    .mainBlogPostAutorFlexParent li{
+        width: 16%;
+    }
+    .mainBlogPostAutorFlexParent li:first-child{
+        width: 10%;
+    }
+    .mainBlogPostAutorFlexParent li:nth-child(2){
+        width: 42%;
+    }
+
+    .ligterBodyText,
+    .mainBlogPostingSnsIcons{
+        margin-top: 2%;
+    }
+
+    .mainBlogPostingSnsIcons{
+        display: flex;
+
+        li{
+            margin-left: 2%;
+        }
+
+        & li:first-child{
+            margin-left:0;
+        }
+    }
+
+}
+
+
+
+/*======================================
+//// section .relatedPosts Styling ////
+====================================*/
+.relatedPosts{
+    margin-top: 10%;
+
+    .relatedPostsFlexParent{
+        margin-top: 5%;
+        display: flex;
+        justify-content: space-between;
+        
+        li {
+            width: calc(100% / 3 - 1.5%);
+
+            img{
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+
+
+/*======================================
+//// section . comments Styling ////
+====================================*/
+.comments{
+    margin-top: 10%;
+    margin-bottom: 10%;
+
+    .commentsFlexParent{
+        margin-top: 5%;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .commentsText{
+        width: 85%;
+        background-color: $whiteTwo;
+        padding: 2% 0 3% 3%;
+        margin-bottom: 5%;
+    }
+    
+    input,
+    textarea{
+        border: 0;
+        padding: 0;
+    }
+
+    .formFlexParent{
+        margin-top: 10%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .inputContainer{
+        width: calc(100% / 3 - 2%);
+    }
+
+    .darkerText input{
+        width: 100%;
+    }
+
+    button{
+        margin-top: 25%;
+        background-color: white;
+        border: 0;
+    }
+
+    .textareaContainer{
+        width: 90%;
+    }
+    textarea{
+        margin-top: 8%;
+        resize: none;
+        width: 100%;
+        height: 250px;
+    }
+}
+
+
+
+/*=====================================
+//// blogPage 450px media queries ////
+===================================*/
+@media (max-width: 450px){
+    h4{
+    font-size: 2em;
+    }
+
+    .mainBlogPost{
+        .wrapper{
+            .mainBlogPostAutorFlexParent{
+                flex-wrap: wrap;
+                
+                li{
+                    width:50%;
+                }
+
+                div{
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+
+    .comments{
+        .formFlexParent{
+            flex-direction: column;
+            
+            .inputContainer{
+                margin:5% 0 5% 0;
+
+                input{
+                    width: 250px;
+                }
+            }
+            input,
+            textarea{
+                border: 1px solid $accessibilityGrey;
+            }
+        }
+    }
+
+    .mainBlogPostAutorFlexParent::after,
+    h5::after,
+    .horizontalGreyShort::after,
+    .horizontalGreyShortDark::after,
+    .horizontalGreyLong::after{
+            visibility: hidden;
+    }
+}
