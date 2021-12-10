@@ -1,3 +1,7 @@
+/*suitable grey wasn't provided in color palette.
+lightest grey that passes contrast check test has been 
+picked to be used for grey fonts on white background 
+resource used for check  colourcontrast.cc */
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -234,6 +238,7 @@ h1,
 h2,
 h3,
 h4,
+h5,
 p,
 ul,
 a {
@@ -351,35 +356,30 @@ a:visited {
   color: #F6F6F6;
 }
 
-/*========================
+.commentsText span {
+  color: #007c59;
+}
+
+.commentsText p:nth-child(3) {
+  color: #747474;
+}
+
+.comments button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: black;
+}
+
+.darkerText {
+  color: #333333;
+}
+
+/*=======================
 //// Header Styling ////
-=========================*/
-header {
-  background: url(../assets/home-1.jpeg) center;
-  background-size: cover;
-  height: 100vh;
-}
-header .topNavFlexParent {
-  display: flex;
-  width: 100%;
-  padding-top: 5%;
-}
-header .navText {
-  display: inline-block;
-}
-header h1 {
-  width: 30%;
-  text-align: center;
-  margin: 0 auto;
-}
-header ul {
-  display: flex;
-}
-header ul li {
-  margin-right: 5%;
-}
-header ul li:last-child {
-  margin-right: 0;
+=====================*/
+.homeHeader {
+  background: url(../assets/home-1.jpeg);
 }
 
 /*===================================
@@ -580,6 +580,208 @@ header ul li:last-child {
   width: 50%;
   background-image: url(../assets/home-10.jpeg);
   background-size: cover;
+}
+
+/*=======================
+//// Header Styling ////
+=====================*/
+.blogHeader {
+  background-image: url(../assets/blog-1.jpeg);
+}
+
+/*================================
+//// horizontal line Styling ////
+==============================*/
+.mainBlogPostAutorFlexParent,
+h5,
+.inputContainer,
+.textareaContainer,
+.submitContainer {
+  position: relative;
+}
+
+.mainBlogPostAutorFlexParent::after,
+h5::after,
+.horizontalGreyShort::after,
+.horizontalGreyShortDark::after,
+.horizontalGreyLong::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #F6F6F6;
+  bottom: -40%;
+  left: 0;
+}
+
+.horizontalGreyShort::after,
+.horizontalGreyShortDark::after {
+  width: 85%;
+}
+
+.horizontalGreyShortDark::after {
+  background-color: #747474;
+}
+
+.horizontalGreyLong::after {
+  bottom: 0;
+}
+
+.submitContainer .horizontalGreyShort::after {
+  width: 100%;
+  bottom: 0;
+  background-color: #747474;
+}
+
+/*======================================
+//// section .mainBlogPost Styling ////
+====================================*/
+.mainBlogPost {
+  padding-top: 10%;
+}
+.mainBlogPost h4 {
+  margin-bottom: 2%;
+}
+.mainBlogPost span,
+.mainBlogPost .ligterBodyText,
+.mainBlogPost .mainBlogPostAutorFlexParent p {
+  /*suitable grey wasn't provided in color palette.
+  lightest grey that passes contrast check test has been 
+  picked to be used for grey fonts on white background 
+  resource used for check  colourcontrast.cc */
+  color: #747474;
+}
+.mainBlogPost .mainBlogPostAutorFlexParent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mainBlogPost .mainBlogPostAutorFlexParent {
+  margin: 7% 0;
+}
+.mainBlogPost img {
+  border-radius: 50%;
+}
+.mainBlogPost .mainBlogPostAutorFlexParent li {
+  width: 16%;
+}
+.mainBlogPost .mainBlogPostAutorFlexParent li:first-child {
+  width: 10%;
+}
+.mainBlogPost .mainBlogPostAutorFlexParent li:nth-child(2) {
+  width: 42%;
+}
+.mainBlogPost .ligterBodyText,
+.mainBlogPost .mainBlogPostingSnsIcons {
+  margin-top: 2%;
+}
+.mainBlogPost .mainBlogPostingSnsIcons {
+  display: flex;
+}
+.mainBlogPost .mainBlogPostingSnsIcons li {
+  margin-left: 2%;
+}
+.mainBlogPost .mainBlogPostingSnsIcons li:first-child {
+  margin-left: 0;
+}
+
+/*======================================
+//// section .relatedPosts Styling ////
+====================================*/
+.relatedPosts {
+  margin-top: 10%;
+}
+.relatedPosts .relatedPostsFlexParent {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+.relatedPosts .relatedPostsFlexParent li {
+  width: calc(100% / 3 - 1.5%);
+}
+.relatedPosts .relatedPostsFlexParent li img {
+  max-width: 100%;
+}
+
+/*======================================
+//// section . comments Styling ////
+====================================*/
+.comments {
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+.comments .commentsFlexParent {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+.comments .commentsText {
+  width: 85%;
+  background-color: #F6F6F6;
+  padding: 2% 0 3% 3%;
+  margin-bottom: 5%;
+}
+.comments input,
+.comments textarea {
+  border: 0;
+  padding: 0;
+}
+.comments .formFlexParent {
+  margin-top: 10%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.comments .inputContainer {
+  width: calc(100% / 3 - 2%);
+}
+.comments .darkerText input {
+  width: 100%;
+}
+.comments button {
+  margin-top: 25%;
+  background-color: white;
+  border: 0;
+}
+.comments .textareaContainer {
+  width: 90%;
+}
+.comments textarea {
+  margin-top: 8%;
+  resize: none;
+  width: 100%;
+  height: 250px;
+}
+
+/*=======================
+//// Header Styling ////
+=====================*/
+header {
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+header .topNavFlexParent {
+  display: flex;
+  width: 100%;
+  padding-top: 5%;
+}
+header .navText {
+  display: inline-block;
+}
+header h1 {
+  width: 30%;
+  text-align: center;
+  margin: 0 auto;
+}
+header ul {
+  display: flex;
+}
+header ul li {
+  margin-right: 5%;
+}
+header ul li:last-child {
+  margin-right: 0;
 }
 
 /*======================================
