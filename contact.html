@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,43 +9,46 @@
     <!-- // google font import // -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans&display=swap"
         rel="stylesheet">
-    
+
     <!-- // FontAwesome link //-->
     <script src="https://kit.fontawesome.com/12e0e6e5dc.js" crossorigin="anonymous"></script>
-    
+
     <!-- // CSS import // -->
     <link rel="stylesheet" href="./styles/sass/style.css">
-    
-    <title>CREATIVE - CONTACT US</title>
+    <title>Creative</title>
 </head>
+
 <body>
-    <header class="contact">
+    <!--=======================
+        ///// header /////
+    ========================-->
+    <header class="contactHeader">
         <div class="wrapper">
             <div class="topNavFlexParent">
-        
-                <div class="topNavLeft">
+
+                <div class="topNavLeft navText" id="home">
                     <ul>
-                        <li><a href="#"></a>HOME</li>
-                        <li><a href=""></a>BLOG</li>
-                        <li><a href=""></a>PORTFOLIO</li>
+                        <li><a href="./index.html">HOME</a></li>
+                        <li><a href="./blog.html">BLOG</a></li>
+                        <li><a href="./index.html">PORTFOLIO</a></li>
                     </ul>
                 </div>
                 <h1>CREATIVE</h1>
-                <div class="topNavRight">
+                <div class="topNavRight navText">
                     <ul>
-                        <li><a href=""></a>SHOP</li>
-                        <li><a href=""></a>CONTACT</li>
-                        <li><a href=""></a><i class="fas fa-search"></i></li>
-                        <li><a href=""></a><i class="fas fa-shopping-bag"></i></li>
+                        <li><a href="#">SHOP</a></li>
+                        <li><a href="./contact.html">CONTACT</a></li>
+                        <li><a href="#"><i class="fas fa-search"></i></a></li>
+                        <li><a href="#"><i class="fas fa-shopping-bag"></i></a></li>
                     </ul>
                 </div>
         
             </div>
             <!-- // .topNavFlexParent ends // -->
             
-            <h4>CONTACT US</h4>
+            <h4>CONTACT<br>US</h4>
 
         </div>
         <!-- // .wrapper header ends // -->
@@ -66,16 +70,20 @@
                     <p>Phone 01: 123, 456 7890</p>
                     <p>Phone 02: 345 678 9101</p>
                 </div>
-                <div>
+                <div class="verticalGreyContainer">
+                <div class="verticalGrey">
                     <i class="fas fa-map-marker-alt"></i>
                     <p>ADDRESS</p>
-                    <p>6591 Orchard Street, Toronto, Ontario</p>
+                    <p>6591 Orchard Street,</p> <p>Toronto, Ontario</p>
                 </div>
-                <div>
+                </div>
+                <div class="verticalGreyContainer">
+                <div class="verticalGrey">
                     <i class="fas fa-envelope"></i>
                     <p>EMAIL</p>
                     <p>contact@creative.com</p>
                     <p>info@creative.com</p>
+                </div>
                 </div>
             </div>
         </div>
@@ -91,51 +99,69 @@
     <section class="getInTouch">
         <div class="wrapper">
             <h2>GET IN TOUCH WITH US</h2>
+            <p>If you have any question, Please don't hesitate to send us a message</p>
             <form action="">
                 <div class="formFlexParent">
-                    <input type="text" class="shortGreyHorizontal" placeholder="Enter your name...">
-                    <input type="email" class="shortGreyHorizontal" placeholder="yourEmail@domain.com">
-                    <input type="text" class="shortGreyHorizontal" placeholder="Subject (Optional)">
-                    <textarea name="comment" id="comment" class="greyHorizontal" cols="30" rows="10" placeholder="Here goes  your message"></textarea>
-                    <button type="submit">SEND MESSAGE</button>
+            
+                    <div class="inputContainer">
+                        <input type="text" placeholder="Enter your name...">
+                        <div class="horizontalGreyShort"></div>
+                    </div>
+            
+                    <div class="inputContainer darkerText">
+                        <input type="email" placeholder="yourEmail@domain.com">
+                        <div class="horizontalGreyShortDark"></div>
+                    </div>
+            
+                    <div class="inputContainer">
+                        <input type="text" placeholder="Subject (Optional)">
+                        <div class="horizontalGreyShort"></div>
+                    </div>
+            
+                    <div class="textareaContainer">
+                        <textarea name="comment" id="comment" placeholder="Here goes  your message"></textarea>
+                        <div class="horizontalGreyLong"></div>
+                    </div>
+            
+                    <div class="submitContainer">
+                        <button type="submit">SEND MESSAGE</button>
+                        <div class="horizontalGreyShort"></div>
+                    </div>
+                    
                 </div>
                 <!-- // .formFlexParent ends // -->
             </form>
             <!-- // form ends // -->
         </div>
     </section>
-
+    
+    <div class="bottomBackgroundImg"></div>
 
     <!--=============================
-    ///// section - .bottomBand /////
-    ===============================-->
+        ///// section - .bottomBand /////
+        ===============================-->
     <section class="bottomBand">
         <div class="wrapper">
-            <div class="footerFlexParent">
+            <div class="bottomBandFlexParent">
                 <div class="contactInfo">
                     <H3>CONTACT US</H3>
                     <ul>
                         <li>
-                            <p>6591 Orchard Street, NY 10002, United States</p>
+                            <p>
+                                6591 Orchard Street, NY 10002, United States<br>
+                                Email: contac@onepro.co,<br>
+                                Phone 01: +00 (9) 123 3456 789<br>
+                                Phone 02: +00 (9) 123 3456 789<br>
+                                Fax: 00 (9) 643 6543 898
+                            </p>
                         </li>
-                        <li>
-                            <p>Email: contac@onepro.co</p>
-                        </li>
-                        <li>
-                            <p>Phone 01: +00 (9) 123 3456 789</p>
-                        </li>
-                        <li>
-                            <p>Phone 02: +00 (9) 123 3456 789</p>
-                        </li>
-                        <li>
-                            <p>Fax: 00 (9) 643 6543 898</p>
-                        </li>
+    
                         <li>
                             <div>
                                 <ul class="snsLinkIconsFlexParent">
-                                    <li><a href="#"></a><i class="fab fa-facebook-f"></i></li>
-                                    <li><a href="#"></a><i class="fab fa-twitter"></i></li>
-                                    <li><a href="#"></a><i class="fab fa-instagram"></i></li>
+                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li class="test"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                                 </ul>
                             </div>
                         </li>
@@ -144,11 +170,11 @@
                 <div class="recentPosts">
                     <h3>RECENT POSTS</h3>
                     <ul>
-                        <li><a href="#"></a>Conversion hackathon partner</li>
-                        <li><a href="#"></a>Network channels entrepreneur</li>
-                        <li><a href="#"></a>Return on investment creative</li>
-                        <li><a href="#"></a>Assets interaction design venture</li>
-                        <li><a href="#"></a>infographic learning curve</li>
+                        <li><a href="#">Conversion hackathon partner</a></li>
+                        <li><a href="#">Network channels entrepreneur</a></li>
+                        <li><a href="#">Return on investment creative</a></li>
+                        <li><a href="#">Assets interaction design venture</a></li>
+                        <li><a href="#">infographic learning curve</a></li>
                     </ul>
                 </div>
                 <div class="signUp">
@@ -156,7 +182,7 @@
                     <p>signup for emails and notifications below</p>
                     <form action="">
                         <input type="email" id="email" name="email" placeholder="Enter your email">
-                        <label for="email" class="visuallyHidden">Email address</label>
+                        <label for="email" class="sr-only">Email address</label>
     
                         <button type="submit"><i class="fas fa-long-arrow-alt-right"></i></button>
                     </form>
@@ -168,15 +194,12 @@
     <!-- // section .bottomBand ends // -->
     
     
-    
-    <!--===================
-        ///// footer /////
-    =====================-->
+    <!--=====================
+            ///// footer /////
+        =======================-->
     <footer>
         <p>CREATIVE AGENCY</p>
     </footer>
     </body>
     
     </html>
-</body>
-</html>

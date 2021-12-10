@@ -380,6 +380,7 @@ a:visited {
 =====================*/
 .homeHeader {
   background: url(../assets/home-1.jpeg);
+  background-size: cover;
 }
 
 /*===================================
@@ -587,6 +588,7 @@ a:visited {
 =====================*/
 .blogHeader {
   background-image: url(../assets/blog-1.jpeg);
+  background-size: cover;
 }
 
 /*================================
@@ -753,12 +755,129 @@ h5::after,
   height: 250px;
 }
 
+/*================================
+//// general contact Styling ////
+==============================*/
+h2 {
+  text-align: left;
+  margin-bottom: 5%;
+}
+
+/*=======================
+//// Header Styling ////
+=====================*/
+.contactHeader {
+  background-image: url(../assets/contact-1.jpeg);
+  background-repeat: no-repeat;
+  max-height: 100%;
+  background-position: 0 150px;
+  height: 50vh;
+}
+.contactHeader h4 {
+  margin-top: 13%;
+}
+
+/*=================================
+//// section .aboutUs Styling ////
+===============================*/
+.contactDetails {
+  margin-top: 7%;
+}
+.contactDetails p {
+  color: #747474;
+  margin-bottom: 5%;
+}
+.contactDetails .wrapper p:nth-child(2) {
+  width: 50%;
+}
+.contactDetails .contactDetailInfoFlexParent {
+  display: flex;
+  justify-content: space-between;
+}
+.contactDetails .contactDetailInfoFlexParent i {
+  font-size: 2em;
+}
+.contactDetails .contactDetailInfoFlexParent div {
+  width: calc(100% / 3 - 2%);
+  padding-top: 3%;
+}
+.contactDetails .contactDetailInfoFlexParent div p:nth-child(2) {
+  color: black;
+  margin-top: 20px;
+}
+.contactDetails .contactDetailInfoFlexParent .verticalGreyContainer {
+  position: relative;
+}
+.contactDetails .contactDetailInfoFlexParent .verticalGrey::after {
+  position: absolute;
+  bottom: 0;
+  content: "";
+  height: 100%;
+  left: -40%;
+  width: 2px;
+  background-color: #F6F6F6;
+}
+
+/*====================================
+//// section .getInTouch Styling ////
+==================================*/
+.getInTouch {
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+.getInTouch h2 {
+  margin-bottom: 2%;
+}
+.getInTouch p {
+  color: #747474;
+}
+.getInTouch input,
+.getInTouch textarea {
+  border: 0;
+  padding: 0;
+}
+.getInTouch .formFlexParent {
+  margin-top: 10%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.getInTouch .inputContainer {
+  width: calc(100% / 3 - 2%);
+}
+.getInTouch .darkerText input {
+  width: 100%;
+}
+.getInTouch button {
+  margin-top: 25%;
+  background-color: white;
+  border: 0;
+}
+.getInTouch .textareaContainer {
+  width: 90%;
+}
+.getInTouch textarea {
+  margin-top: 8%;
+  resize: none;
+  width: 100%;
+  height: 250px;
+}
+
+/*=====================================
+//// .bottomBackgroundImg Styling ////
+===================================*/
+.bottomBackgroundImg {
+  background-image: url(../assets/contact-2.jpeg);
+  height: 65vh;
+  background-size: cover;
+  background-position: center;
+}
+
 /*=======================
 //// Header Styling ////
 =====================*/
 header {
   background-position: center;
-  background-size: cover;
   height: 100vh;
 }
 header .topNavFlexParent {
