@@ -58,9 +58,16 @@
 //// section - .portfolio Styling ////
 ===================================*/
 .portfolio{
-    img{
-        border-radius: 50%;
+    button:hover{
+        cursor: pointer;
+    }
+    button{
+        img{
+            border-radius: 50%;
+        }
         margin: 0 auto;
+        background-color: white;
+        border: none;
     }
 
     i{
@@ -278,6 +285,10 @@
     
     .portfolio p{
         width: 100%;
+    }
+
+    .modalContent {
+        max-height: 300px;
     }
 
     .specialty{
